@@ -6,7 +6,15 @@ const options = {
 		"X-RapidAPI-Host": "counter10.p.rapidapi.com",
 	},
 };
-
+let me;
 fetch(url, options)
 	.then((response) => response.json())
-    .then(data => console.log(data))
+    .then(data => {
+        me = data.message;
+    } )
+
+document.querySelector(`button`).addEventListener(`click`, function(){
+    document.querySelector(`p`).textContent = `Wait a moment`;
+    document.querySelector(`p`).textContent = `This Site has been viewed ${me} times`
+    
+})

@@ -23,3 +23,24 @@ background-color: black;
     color: white;
     font-size: 5rem;
 }
+p{
+    text-align: center;
+}
+
+button{
+    width: 10rem;
+    height: 5rem;
+    background-color: aqua;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .5s;
+    margin: 2rem auto;
+    display: block;
+}
+
+button:active{
+    transform: scale(0.9);
+    transition: .5s;
+    /* text-align: center; */
+}
