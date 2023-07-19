@@ -9,12 +9,9 @@ const options = {
 let me;
 fetch(url, options)
 	.then((response) => response.json())
-    .then(data => {
-        me = data.message;
-    } )
-
-document.querySelector(`button`).addEventListener(`click`, function(){
-    document.querySelector(`p`).textContent = `Wait a moment`;
-    document.querySelector(`p`).textContent = `This Site has been viewed ${me} times`
-    
-})
+	.then((data) => {
+		me = data.message;
+		document.querySelector(
+			`p`
+		).textContent = `This Site has been viewed ${me} times`;
+	});
